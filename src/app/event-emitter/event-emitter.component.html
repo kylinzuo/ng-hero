@@ -1,0 +1,19 @@
+<div>
+  <p>
+    event-emitter works! {{msg}}
+  </p>
+  <p>{{pMsg}}</p>
+  <p>{{size}}</p>
+  <button (click)="notifyParent()">event-emitter</button>
+  <br>
+  <ul>
+    <li *ngFor="let d of arr; trackBy:trackByHeroes;">{{d.id}}-{{d.name}}</li>
+  </ul>
+  <div [ngSwitch]="case">
+    <p *ngSwitchCase="'kylin'">kylin</p>
+    <p *ngSwitchDefault>ngSwitchDefault</p>
+  </div>
+  <div>
+    {{nullHero?.name}}
+  </div>
+</div>

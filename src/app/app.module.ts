@@ -16,6 +16,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { EventEmitterComponent } from './event-emitter/event-emitter.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     HeroesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    EventEmitterComponent
   ],
   imports: [
     BrowserModule,

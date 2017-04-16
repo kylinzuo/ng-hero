@@ -11,3 +11,7 @@
 </div>
 <hero-form></hero-form>
 <hero-search></hero-search>
+
+<div>{{fontSizePx}}</div>
+<button (click)="fontSizePx=1000">change fontSizePx</button>
+<event-emitter [(size)] = "fontSizePx" (sendMsg)="receive($event)" pMsg="hello child"></event-emitter>
