@@ -17,6 +17,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { EventEmitterComponent } from './event-emitter/event-emitter.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EventEmitterComponent } from './event-emitter/event-emitter.component';
     DashboardComponent,
     HeroSearchComponent,
     HeroFormComponent,
-    EventEmitterComponent
+    EventEmitterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

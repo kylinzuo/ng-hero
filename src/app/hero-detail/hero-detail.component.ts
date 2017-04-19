@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hero } from '../../interface/index';
 
-import { ActivatedRoute, Params }   from '@angular/router';
+import { Router, ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 
 import { HeroService } from '../../service/hero.service';
@@ -17,18 +17,29 @@ export class HeroDetailComponent implements OnInit {
   hero: Hero;
   constructor(
     private heroService: HeroService,
+    private router: Router,
     private route: ActivatedRoute,
     private location: Location
   ) { }
 
   ngOnInit(): void {
+    console.log('route', Object.assign({}, this.route))
+    console.log('snapshot', this.route.snapshot)
+    // this.route.url
+    //   .map(function(params: Params){
+    //     return params['url']
+    //   })
+    //   .subscribe(function(data){
+    //     console.log('data', data)
+    //   })
     this.route.params
       .switchMap((params: Params) => this.heroService.getHero(+params['id']))
       .subscribe(hero => this.hero = hero);
   }
 
   goBack(): void {
-    this.location.back();
+    // this.location.back();
+    this.router.navigate(['/heroes', { id: this.hero.id, foo: 'foo' }])
   }
 
   save(): void {
